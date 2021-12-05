@@ -9,7 +9,7 @@ spec:
     matchLabels:
       app: correos
       tier: uno
-  replicas: 
+  replicas: 7
   template:
     metadata:
       labels:
