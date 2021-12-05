@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: miriam-crud
+  labels:
+    app: correos
+spec:
+  selector:
+    matchLabels:
+      app: correos
+      tier: uno
+  replicas: 
+  template:
+    metadata:
+      labels:
+        app: correos
+        tier: uno
+    spec:
+      containers:
+      - name: app-correos
+        image: miriamak/crud:v4
+        ports: 
+        - containerPort: 80 
